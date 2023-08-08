@@ -47,6 +47,7 @@
             this.btn_0 = new System.Windows.Forms.Button();
             this.btn_point = new System.Windows.Forms.Button();
             this.btn_multiply = new System.Windows.Forms.Button();
+            this.btn_negate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_hello
@@ -63,7 +64,7 @@
             // 
             this.lbl_hello.AutoSize = true;
             this.lbl_hello.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_hello.Location = new System.Drawing.Point(192, 53);
+            this.lbl_hello.Location = new System.Drawing.Point(195, 53);
             this.lbl_hello.Name = "lbl_hello";
             this.lbl_hello.Size = new System.Drawing.Size(21, 21);
             this.lbl_hello.TabIndex = 1;
@@ -237,11 +238,22 @@
             this.btn_multiply.UseVisualStyleBackColor = true;
             this.btn_multiply.Click += new System.EventHandler(this.btn_multiply_Click);
             // 
+            // btn_negate
+            // 
+            this.btn_negate.Location = new System.Drawing.Point(46, 188);
+            this.btn_negate.Name = "btn_negate";
+            this.btn_negate.Size = new System.Drawing.Size(75, 23);
+            this.btn_negate.TabIndex = 20;
+            this.btn_negate.Text = "+/-";
+            this.btn_negate.UseVisualStyleBackColor = true;
+            this.btn_negate.Click += new System.EventHandler(this.btn_negate_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(442, 344);
+            this.Controls.Add(this.btn_negate);
             this.Controls.Add(this.btn_multiply);
             this.Controls.Add(this.btn_point);
             this.Controls.Add(this.btn_0);
@@ -289,5 +301,6 @@
         private Button btn_0;
         private Button btn_point;
         private Button btn_multiply;
+        private Button btn_negate;
     }
 }

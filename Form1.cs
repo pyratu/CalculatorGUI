@@ -1,7 +1,7 @@
+using System.Text;
+
 namespace CalculatorGUI
 {
-
-
     public partial class Form1 : Form
     {
         public Form1()
@@ -23,9 +23,14 @@ namespace CalculatorGUI
             return double.Parse((string)row["expression"]);
         }
 
+        public static string ReplaceAt(string str, int index, int length, string replace)
+        {
+            return str.Remove(index, Math.Min(length, str.Length - index)).Insert(index, replace);
+        }
+
         private void btn_plus_Click(object sender, EventArgs e)
         {
-            if (tbox_number1.Text.Length > 0 && Char.IsDigit(tbox_number1.Text[tbox_number1.Text.Length - 1]))
+            if (tbox_number1.Text.Length > 0 && cnt == false && (Char.IsDigit(tbox_number1.Text[tbox_number1.Text.Length - 1])) || tbox_number1.Text[tbox_number1.Text.Length - 1] == ')')
                 tbox_number1.Text = tbox_number1.Text + "+";
         }
 
@@ -81,12 +86,13 @@ namespace CalculatorGUI
 
         private void btn_minus_Click(object sender, EventArgs e)
         {
-            if(tbox_number1.Text.Length > 0 && Char.IsDigit(tbox_number1.Text[tbox_number1.Text.Length - 1]))
-            tbox_number1.Text = tbox_number1.Text + "-";
+            if (tbox_number1.Text.Length > 0 && cnt == false && (Char.IsDigit(tbox_number1.Text[tbox_number1.Text.Length - 1])) || tbox_number1.Text[tbox_number1.Text.Length - 1] == ')')
+                tbox_number1.Text = tbox_number1.Text + "-";
         }
 
         private void btn_backs_Click(object sender, EventArgs e)
         {
+            if(tbox_number1.Text.Length>0)
             tbox_number1.Text = tbox_number1.Text.Remove(tbox_number1.Text.Length - 1);
         }
 
@@ -97,7 +103,7 @@ namespace CalculatorGUI
 
         private void btn_point_Click(object sender, EventArgs e)
         {
-            if (tbox_number1.Text.Length > 0 &&cnt==false&& Char.IsDigit(tbox_number1.Text[tbox_number1.Text.Length - 1]))
+            if (tbox_number1.Text.Length > 0 &&cnt==false&& (Char.IsDigit(tbox_number1.Text[tbox_number1.Text.Length - 1])))
             {
                 tbox_number1.Text = tbox_number1.Text + ".";
                 cnt = true;
@@ -109,6 +115,21 @@ namespace CalculatorGUI
         {
             if (tbox_number1.Text.Length > 0 && Char.IsDigit(tbox_number1.Text[tbox_number1.Text.Length - 1]))
             tbox_number1.Text = tbox_number1.Text + "*";
+        }
+
+        private void btn_negate_Click(object sender, EventArgs e)
+        {
+            if (tbox_number1.Text.Length > 0 && Char.IsDigit(tbox_number1.Text[tbox_number1.Text.Length - 1]))
+            {
+                string str = tbox_number1.Text;
+                char c = str[str.Length - 1];
+                int nr = c - '0';
+                nr = nr * (-1);
+                string strtmp = "(" + nr.ToString() + ")";
+                str = ReplaceAt(str, str.Length - 1, 1, strtmp);
+                tbox_number1.Text = str;
+            }
+
         }
     }
 
