@@ -131,6 +131,19 @@ namespace CalculatorGUI
             }
 
         }
+        private void btn_sqr_Click(object sender, EventArgs e)
+        {
+            string str = tbox_number1.Text;
+            string strtmp = "";
+            for (int i = str.Length - 1; i >= 0; i--)
+            {
+                if (str[i] == '+' || str[i] == '-' || str[i] == '*' || str[i] == '/' || str[i] == '%' || str[i] == '(' || str[i] == ')')
+                    break;
+                strtmp = str[i].ToString() + strtmp;
+            }
+            int n;
+            if(int.TryParse(strtmp, out n))
+                tbox_number1.Text = (int.Parse(strtmp) * int.Parse(strtmp)).ToString();
+        }
     }
-
 }

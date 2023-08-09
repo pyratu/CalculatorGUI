@@ -48,6 +48,7 @@
             this.btn_point = new System.Windows.Forms.Button();
             this.btn_multiply = new System.Windows.Forms.Button();
             this.btn_negate = new System.Windows.Forms.Button();
+            this.btn_sqr = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_hello
@@ -248,11 +249,22 @@
             this.btn_negate.UseVisualStyleBackColor = true;
             this.btn_negate.Click += new System.EventHandler(this.btn_negate_Click);
             // 
+            // btn_sqr
+            // 
+            this.btn_sqr.Location = new System.Drawing.Point(127, 72);
+            this.btn_sqr.Name = "btn_sqr";
+            this.btn_sqr.Size = new System.Drawing.Size(75, 23);
+            this.btn_sqr.TabIndex = 21;
+            this.btn_sqr.Text = "x^2";
+            this.btn_sqr.UseVisualStyleBackColor = true;
+            this.btn_sqr.Click += new System.EventHandler(this.btn_sqr_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(442, 344);
+            this.Controls.Add(this.btn_sqr);
             this.Controls.Add(this.btn_negate);
             this.Controls.Add(this.btn_multiply);
             this.Controls.Add(this.btn_point);
@@ -302,5 +314,6 @@
         private Button btn_point;
         private Button btn_multiply;
         private Button btn_negate;
+        private Button btn_sqr;
     }
 }
