@@ -7,19 +7,12 @@ namespace CalculatorGUI
     {
         public Form1()
         {
-
-
             DarkTitleBarClass.UseImmersiveDarkMode(Handle, true);
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.FixedSingle; // OR FormBorderStyle.FixedDialog OR FormBorderStyle.Fixed3D
-            flowLayoutPanel1.BackColor = Color.FromArgb(0,Color.Black);
         }
         bool cnt = false;
-        private void btn_hello_Click(object sender, EventArgs e)
-        {
-            lbl_hello.Text=Evaluate(tbox_number1.Text).ToString();
-            cnt = false;
-        }
+
         public static double Evaluate(string expression)
         {
             System.Data.DataTable table = new System.Data.DataTable();
@@ -98,8 +91,8 @@ namespace CalculatorGUI
 
         private void btn_backs_Click(object sender, EventArgs e)
         {
-            if(tbox_number1.Text.Length>0)
-            tbox_number1.Text = tbox_number1.Text.Remove(tbox_number1.Text.Length - 1);
+            if (tbox_number1.Text.Length > 0)
+                tbox_number1.Text = tbox_number1.Text.Remove(tbox_number1.Text.Length - 1);
         }
 
         private void btn_0_Click(object sender, EventArgs e)
@@ -109,18 +102,17 @@ namespace CalculatorGUI
 
         private void btn_point_Click(object sender, EventArgs e)
         {
-            if (tbox_number1.Text.Length > 0 &&cnt==false&& (Char.IsDigit(tbox_number1.Text[tbox_number1.Text.Length - 1])))
+            if (tbox_number1.Text.Length > 0 && cnt == false && (Char.IsDigit(tbox_number1.Text[tbox_number1.Text.Length - 1])))
             {
                 tbox_number1.Text = tbox_number1.Text + ".";
                 cnt = true;
             }
- 
         }
 
         private void btn_multiply_Click(object sender, EventArgs e)
         {
             if (tbox_number1.Text.Length > 0 && Char.IsDigit(tbox_number1.Text[tbox_number1.Text.Length - 1]))
-            tbox_number1.Text = tbox_number1.Text + "*";
+                tbox_number1.Text = tbox_number1.Text + "*";
         }
 
         private void btn_negate_Click(object sender, EventArgs e)
@@ -135,7 +127,6 @@ namespace CalculatorGUI
                 str = ReplaceAt(str, str.Length - 1, 1, strtmp);
                 tbox_number1.Text = str;
             }
-
         }
         private void btn_sqr_Click(object sender, EventArgs e)
         {
@@ -148,7 +139,7 @@ namespace CalculatorGUI
                 strtmp = str[i].ToString() + strtmp;
             }
             int n;
-            if(int.TryParse(strtmp, out n))
+            if (int.TryParse(strtmp, out n))
                 tbox_number1.Text = (int.Parse(strtmp) * int.Parse(strtmp)).ToString();
         }
 
@@ -160,7 +151,7 @@ namespace CalculatorGUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btn_one_Click(object sender, EventArgs e)
@@ -222,11 +213,10 @@ namespace CalculatorGUI
         private void btn_equal_Click(object sender, EventArgs e)
         {
             lbl_hello.Text = tbox_number1.Text;
-            tbox_number1.Text= Evaluate(tbox_number1.Text).ToString();
-            
+            tbox_number1.Text = Evaluate(tbox_number1.Text).ToString();
+
 
         }
-
         private void btn_add_Click(object sender, EventArgs e)
         {
             if (tbox_number1.Text.Length > 0 && cnt == false && (Char.IsDigit(tbox_number1.Text[tbox_number1.Text.Length - 1])) || tbox_number1.Text[tbox_number1.Text.Length - 1] == ')')
@@ -281,6 +271,19 @@ namespace CalculatorGUI
         {
             if (tbox_number1.Text.Length > 0)
                 tbox_number1.Text = tbox_number1.Text.Remove(tbox_number1.Text.Length - 1);
+        }
+        private void btn_neg_Click(object sender, EventArgs e)
+        {
+            if (tbox_number1.Text.Length > 0 && Char.IsDigit(tbox_number1.Text[tbox_number1.Text.Length - 1]))
+            {
+                string str = tbox_number1.Text;
+                char c = str[str.Length - 1];
+                int nr = c - '0';
+                nr = nr * (-1);
+                string strtmp = "(" + nr.ToString() + ")";
+                str = ReplaceAt(str, str.Length - 1, 1, strtmp);
+                tbox_number1.Text = str;
+            }
         }
     }
 }
