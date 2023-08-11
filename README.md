@@ -3,7 +3,7 @@
 ## GUI Preview 📷
 
 <p align="center">
-![Calculator GUI](https://raw.githubusercontent.com/pyratu/CalculatorGUI/main/calculator.png)
+    <img width="200" src="https://raw.githubusercontent.com/pyratu/CalculatorGUI/main/calculator.png" alt="Calculator GUI">
 </p>
 ## Description 📜
 
