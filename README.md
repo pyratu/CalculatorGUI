@@ -2,8 +2,9 @@
 
 ## GUI Preview 📷
 
+<p align="center">
 ![Calculator GUI](https://raw.githubusercontent.com/pyratu/CalculatorGUI/main/calculator.png)
-
+</p>
 ## Description 📜
 
 A work-in-progress **simple calculator** with a graphical user interface (GUI). This calculator project aims to provide a straightforward and intuitive way to perform basic arithmetic operations. Whether you're adding, subtracting, multiplying, or dividing, this calculator is designed to make calculations a breeze.
