@@ -51,6 +51,8 @@
             this.btn_square2 = new CustomControls.RJControls.RJButton();
             this.btn_c = new CustomControls.RJControls.RJButton();
             this.btn_neg = new CustomControls.RJControls.RJButton();
+            this.btn_onepx = new CustomControls.RJControls.RJButton();
+            this.btn_clrtxtbox = new CustomControls.RJControls.RJButton();
             this.SuspendLayout();
             // 
             // lbl_hello
@@ -88,7 +90,7 @@
             this.btn_one.FlatAppearance.BorderSize = 0;
             this.btn_one.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_one.ForeColor = System.Drawing.Color.White;
-            this.btn_one.Location = new System.Drawing.Point(12, 215);
+            this.btn_one.Location = new System.Drawing.Point(10, 270);
             this.btn_one.Name = "btn_one";
             this.btn_one.Size = new System.Drawing.Size(70, 44);
             this.btn_one.TabIndex = 23;
@@ -107,7 +109,7 @@
             this.btn_two.FlatAppearance.BorderSize = 0;
             this.btn_two.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_two.ForeColor = System.Drawing.Color.White;
-            this.btn_two.Location = new System.Drawing.Point(88, 215);
+            this.btn_two.Location = new System.Drawing.Point(86, 270);
             this.btn_two.Name = "btn_two";
             this.btn_two.Size = new System.Drawing.Size(70, 44);
             this.btn_two.TabIndex = 24;
@@ -126,7 +128,7 @@
             this.btn_three.FlatAppearance.BorderSize = 0;
             this.btn_three.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_three.ForeColor = System.Drawing.Color.White;
-            this.btn_three.Location = new System.Drawing.Point(164, 215);
+            this.btn_three.Location = new System.Drawing.Point(162, 270);
             this.btn_three.Name = "btn_three";
             this.btn_three.Size = new System.Drawing.Size(70, 44);
             this.btn_three.TabIndex = 25;
@@ -145,7 +147,7 @@
             this.btn_four.FlatAppearance.BorderSize = 0;
             this.btn_four.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_four.ForeColor = System.Drawing.Color.White;
-            this.btn_four.Location = new System.Drawing.Point(12, 165);
+            this.btn_four.Location = new System.Drawing.Point(10, 220);
             this.btn_four.Name = "btn_four";
             this.btn_four.Size = new System.Drawing.Size(70, 44);
             this.btn_four.TabIndex = 26;
@@ -164,7 +166,7 @@
             this.btn_five.FlatAppearance.BorderSize = 0;
             this.btn_five.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_five.ForeColor = System.Drawing.Color.White;
-            this.btn_five.Location = new System.Drawing.Point(88, 165);
+            this.btn_five.Location = new System.Drawing.Point(86, 220);
             this.btn_five.Name = "btn_five";
             this.btn_five.Size = new System.Drawing.Size(70, 44);
             this.btn_five.TabIndex = 27;
@@ -183,7 +185,7 @@
             this.btn_six.FlatAppearance.BorderSize = 0;
             this.btn_six.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_six.ForeColor = System.Drawing.Color.White;
-            this.btn_six.Location = new System.Drawing.Point(164, 165);
+            this.btn_six.Location = new System.Drawing.Point(162, 220);
             this.btn_six.Name = "btn_six";
             this.btn_six.Size = new System.Drawing.Size(70, 44);
             this.btn_six.TabIndex = 28;
@@ -202,7 +204,7 @@
             this.btn_seven.FlatAppearance.BorderSize = 0;
             this.btn_seven.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_seven.ForeColor = System.Drawing.Color.White;
-            this.btn_seven.Location = new System.Drawing.Point(12, 115);
+            this.btn_seven.Location = new System.Drawing.Point(10, 170);
             this.btn_seven.Name = "btn_seven";
             this.btn_seven.Size = new System.Drawing.Size(70, 44);
             this.btn_seven.TabIndex = 29;
@@ -221,7 +223,7 @@
             this.btn_eight.FlatAppearance.BorderSize = 0;
             this.btn_eight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_eight.ForeColor = System.Drawing.Color.White;
-            this.btn_eight.Location = new System.Drawing.Point(88, 115);
+            this.btn_eight.Location = new System.Drawing.Point(86, 170);
             this.btn_eight.Name = "btn_eight";
             this.btn_eight.Size = new System.Drawing.Size(70, 44);
             this.btn_eight.TabIndex = 30;
@@ -240,7 +242,7 @@
             this.btn_nine.FlatAppearance.BorderSize = 0;
             this.btn_nine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_nine.ForeColor = System.Drawing.Color.White;
-            this.btn_nine.Location = new System.Drawing.Point(164, 115);
+            this.btn_nine.Location = new System.Drawing.Point(162, 170);
             this.btn_nine.Name = "btn_nine";
             this.btn_nine.Size = new System.Drawing.Size(70, 44);
             this.btn_nine.TabIndex = 31;
@@ -259,7 +261,7 @@
             this.btn_zero.FlatAppearance.BorderSize = 0;
             this.btn_zero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_zero.ForeColor = System.Drawing.Color.White;
-            this.btn_zero.Location = new System.Drawing.Point(88, 265);
+            this.btn_zero.Location = new System.Drawing.Point(86, 320);
             this.btn_zero.Name = "btn_zero";
             this.btn_zero.Size = new System.Drawing.Size(70, 44);
             this.btn_zero.TabIndex = 32;
@@ -278,7 +280,7 @@
             this.btn_dot.FlatAppearance.BorderSize = 0;
             this.btn_dot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_dot.ForeColor = System.Drawing.Color.White;
-            this.btn_dot.Location = new System.Drawing.Point(164, 265);
+            this.btn_dot.Location = new System.Drawing.Point(162, 320);
             this.btn_dot.Name = "btn_dot";
             this.btn_dot.Size = new System.Drawing.Size(70, 44);
             this.btn_dot.TabIndex = 33;
@@ -297,7 +299,7 @@
             this.btn_equal.FlatAppearance.BorderSize = 0;
             this.btn_equal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_equal.ForeColor = System.Drawing.Color.White;
-            this.btn_equal.Location = new System.Drawing.Point(238, 265);
+            this.btn_equal.Location = new System.Drawing.Point(236, 320);
             this.btn_equal.Name = "btn_equal";
             this.btn_equal.Size = new System.Drawing.Size(70, 44);
             this.btn_equal.TabIndex = 34;
@@ -316,7 +318,7 @@
             this.btn_add.FlatAppearance.BorderSize = 0;
             this.btn_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_add.ForeColor = System.Drawing.Color.White;
-            this.btn_add.Location = new System.Drawing.Point(238, 215);
+            this.btn_add.Location = new System.Drawing.Point(236, 270);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(70, 44);
             this.btn_add.TabIndex = 35;
@@ -335,7 +337,7 @@
             this.btn_subs.FlatAppearance.BorderSize = 0;
             this.btn_subs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_subs.ForeColor = System.Drawing.Color.White;
-            this.btn_subs.Location = new System.Drawing.Point(238, 165);
+            this.btn_subs.Location = new System.Drawing.Point(236, 220);
             this.btn_subs.Name = "btn_subs";
             this.btn_subs.Size = new System.Drawing.Size(70, 44);
             this.btn_subs.TabIndex = 36;
@@ -354,7 +356,7 @@
             this.btn_multypl.FlatAppearance.BorderSize = 0;
             this.btn_multypl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_multypl.ForeColor = System.Drawing.Color.White;
-            this.btn_multypl.Location = new System.Drawing.Point(238, 115);
+            this.btn_multypl.Location = new System.Drawing.Point(236, 170);
             this.btn_multypl.Name = "btn_multypl";
             this.btn_multypl.Size = new System.Drawing.Size(70, 44);
             this.btn_multypl.TabIndex = 37;
@@ -384,7 +386,7 @@
             this.btn_delone.FlatAppearance.BorderSize = 0;
             this.btn_delone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_delone.ForeColor = System.Drawing.Color.White;
-            this.btn_delone.Location = new System.Drawing.Point(238, 66);
+            this.btn_delone.Location = new System.Drawing.Point(236, 71);
             this.btn_delone.Name = "btn_delone";
             this.btn_delone.Size = new System.Drawing.Size(70, 44);
             this.btn_delone.TabIndex = 40;
@@ -403,7 +405,7 @@
             this.btn_div.FlatAppearance.BorderSize = 0;
             this.btn_div.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_div.ForeColor = System.Drawing.Color.White;
-            this.btn_div.Location = new System.Drawing.Point(88, 65);
+            this.btn_div.Location = new System.Drawing.Point(86, 120);
             this.btn_div.Name = "btn_div";
             this.btn_div.Size = new System.Drawing.Size(70, 44);
             this.btn_div.TabIndex = 41;
@@ -422,7 +424,7 @@
             this.btn_square2.FlatAppearance.BorderSize = 0;
             this.btn_square2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_square2.ForeColor = System.Drawing.Color.White;
-            this.btn_square2.Location = new System.Drawing.Point(12, 66);
+            this.btn_square2.Location = new System.Drawing.Point(10, 121);
             this.btn_square2.Name = "btn_square2";
             this.btn_square2.Size = new System.Drawing.Size(70, 44);
             this.btn_square2.TabIndex = 42;
@@ -441,7 +443,7 @@
             this.btn_c.FlatAppearance.BorderSize = 0;
             this.btn_c.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_c.ForeColor = System.Drawing.Color.White;
-            this.btn_c.Location = new System.Drawing.Point(162, 66);
+            this.btn_c.Location = new System.Drawing.Point(160, 121);
             this.btn_c.Name = "btn_c";
             this.btn_c.Size = new System.Drawing.Size(70, 44);
             this.btn_c.TabIndex = 43;
@@ -460,7 +462,7 @@
             this.btn_neg.FlatAppearance.BorderSize = 0;
             this.btn_neg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_neg.ForeColor = System.Drawing.Color.White;
-            this.btn_neg.Location = new System.Drawing.Point(12, 265);
+            this.btn_neg.Location = new System.Drawing.Point(10, 320);
             this.btn_neg.Name = "btn_neg";
             this.btn_neg.Size = new System.Drawing.Size(70, 44);
             this.btn_neg.TabIndex = 44;
@@ -469,12 +471,52 @@
             this.btn_neg.UseVisualStyleBackColor = false;
             this.btn_neg.Click += new System.EventHandler(this.btn_neg_Click);
             // 
+            // btn_onepx
+            // 
+            this.btn_onepx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btn_onepx.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btn_onepx.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_onepx.BorderRadius = 5;
+            this.btn_onepx.BorderSize = 0;
+            this.btn_onepx.FlatAppearance.BorderSize = 0;
+            this.btn_onepx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_onepx.ForeColor = System.Drawing.Color.White;
+            this.btn_onepx.Location = new System.Drawing.Point(10, 71);
+            this.btn_onepx.Name = "btn_onepx";
+            this.btn_onepx.Size = new System.Drawing.Size(70, 44);
+            this.btn_onepx.TabIndex = 45;
+            this.btn_onepx.Text = "1/x";
+            this.btn_onepx.TextColor = System.Drawing.Color.White;
+            this.btn_onepx.UseVisualStyleBackColor = false;
+            this.btn_onepx.Click += new System.EventHandler(this.btn_onepx_Click);
+            // 
+            // btn_clrtxtbox
+            // 
+            this.btn_clrtxtbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btn_clrtxtbox.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btn_clrtxtbox.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_clrtxtbox.BorderRadius = 5;
+            this.btn_clrtxtbox.BorderSize = 0;
+            this.btn_clrtxtbox.FlatAppearance.BorderSize = 0;
+            this.btn_clrtxtbox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_clrtxtbox.ForeColor = System.Drawing.Color.White;
+            this.btn_clrtxtbox.Location = new System.Drawing.Point(236, 121);
+            this.btn_clrtxtbox.Name = "btn_clrtxtbox";
+            this.btn_clrtxtbox.Size = new System.Drawing.Size(70, 44);
+            this.btn_clrtxtbox.TabIndex = 46;
+            this.btn_clrtxtbox.Text = "CE";
+            this.btn_clrtxtbox.TextColor = System.Drawing.Color.White;
+            this.btn_clrtxtbox.UseVisualStyleBackColor = false;
+            this.btn_clrtxtbox.Click += new System.EventHandler(this.btn_clrtxtbox_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.ClientSize = new System.Drawing.Size(322, 321);
+            this.ClientSize = new System.Drawing.Size(318, 376);
+            this.Controls.Add(this.btn_clrtxtbox);
+            this.Controls.Add(this.btn_onepx);
             this.Controls.Add(this.btn_neg);
             this.Controls.Add(this.lbl_hello);
             this.Controls.Add(this.label1);
@@ -531,5 +573,7 @@
         private CustomControls.RJControls.RJButton btn_square2;
         private CustomControls.RJControls.RJButton btn_c;
         private CustomControls.RJControls.RJButton btn_neg;
+        private CustomControls.RJControls.RJButton btn_onepx;
+        private CustomControls.RJControls.RJButton btn_clrtxtbox;
     }
 }

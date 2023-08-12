@@ -285,5 +285,28 @@ namespace CalculatorGUI
                 tbox_number1.Text = str;
             }
         }
+
+        private void btn_clrtxtbox_Click(object sender, EventArgs e)
+        {
+            tbox_number1.Text = "";
+            
+        }
+        
+        private void btn_onepx_Click(object sender, EventArgs e)
+        {
+            string number = "";
+            for(int i = tbox_number1.Text.Length-1; i >= 0; i--)
+            {
+                if(Char.IsDigit(tbox_number1.Text[i]))
+                    number =  tbox_number1.Text[i].ToString() + number;
+                if (!Char.IsDigit(tbox_number1.Text[i]))
+                    break;
+            }
+            float nbr = int.Parse(number);
+            lbl_hello.Text = "1/" + "(" + nbr.ToString() + ")";
+            nbr = 1 / nbr;
+            tbox_number1.Text=nbr.ToString();
+            
+        }
     }
 }
