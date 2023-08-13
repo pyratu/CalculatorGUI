@@ -1,4 +1,4 @@
-# Microsoft Calculator Windows 10 🧮
+# Windows 10 Calculator Remake 🧮
 
 ## GUI Preview 📷
 
