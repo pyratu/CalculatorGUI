@@ -1,4 +1,4 @@
-# Simple Calculator 🧮
+# Microsoft Calculator Windows 10 🧮
 
 ## GUI Preview 📷
 
