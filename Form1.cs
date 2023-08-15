@@ -5,6 +5,9 @@ namespace CalculatorGUI
 {
     public partial class Form1 : Form
     {
+
+        bool sidebarExpand = true;
+
         public Form1()
         {
             DarkTitleBarClass.UseImmersiveDarkMode(Handle, true);
@@ -145,7 +148,8 @@ namespace CalculatorGUI
 
         private void btn_division_Click(object sender, EventArgs e)
         {
-            if (tbox_number1.Text.Length > 0 && Char.IsDigit(tbox_number1.Text[tbox_number1.Text.Length - 1]))
+            //if (tbox_number1.Text.Length > 0 && Char.IsDigit(tbox_number1.Text[tbox_number1.Text.Length - 1]))
+            if (tbox_number1.Text.Length > 0 && (Char.IsDigit(tbox_number1.Text[tbox_number1.Text.Length - 1]) || tbox_number1.Text[tbox_number1.Text.Length - 1] == ')') && cnt == false)
                 tbox_number1.Text = tbox_number1.Text + "/";
         }
 
@@ -219,19 +223,23 @@ namespace CalculatorGUI
         }
         private void btn_add_Click(object sender, EventArgs e)
         {
-            if (tbox_number1.Text.Length > 0 && cnt == false && (Char.IsDigit(tbox_number1.Text[tbox_number1.Text.Length - 1])) || tbox_number1.Text[tbox_number1.Text.Length - 1] == ')')
+            //if (tbox_number1.Text.Length > 0 && cnt == false && (Char.IsDigit(tbox_number1.Text[tbox_number1.Text.Length - 1])) || tbox_number1.Text[tbox_number1.Text.Length - 1] == ')')
+            if (tbox_number1.Text.Length > 0 && (Char.IsDigit(tbox_number1.Text[tbox_number1.Text.Length - 1]) || tbox_number1.Text[tbox_number1.Text.Length - 1] == ')') && cnt == false)
                 tbox_number1.Text = tbox_number1.Text + "+";
         }
 
         private void btn_subs_Click(object sender, EventArgs e)
         {
-            if (tbox_number1.Text.Length > 0 && cnt == false && (Char.IsDigit(tbox_number1.Text[tbox_number1.Text.Length - 1])) || tbox_number1.Text[tbox_number1.Text.Length - 1] == ')')
+
+            //if (tbox_number1.Text.Length > 0 && cnt == false && (Char.IsDigit(tbox_number1.Text[tbox_number1.Text.Length - 1])) || tbox_number1.Text[tbox_number1.Text.Length - 1] == ')')
+            if (tbox_number1.Text.Length > 0 && (Char.IsDigit(tbox_number1.Text[tbox_number1.Text.Length - 1]) || tbox_number1.Text[tbox_number1.Text.Length - 1] == ')') && cnt == false)
                 tbox_number1.Text = tbox_number1.Text + "-";
         }
 
         private void btn_multypl_Click(object sender, EventArgs e)
         {
-            if (tbox_number1.Text.Length > 0 && Char.IsDigit(tbox_number1.Text[tbox_number1.Text.Length - 1]))
+            //if (tbox_number1.Text.Length > 0 && Char.IsDigit(tbox_number1.Text[tbox_number1.Text.Length - 1]))
+            if (tbox_number1.Text.Length > 0 && (Char.IsDigit(tbox_number1.Text[tbox_number1.Text.Length - 1]) || tbox_number1.Text[tbox_number1.Text.Length - 1] == ')') && cnt == false)
                 tbox_number1.Text = tbox_number1.Text + "*";
         }
 
@@ -307,6 +315,35 @@ namespace CalculatorGUI
             nbr = 1 / nbr;
             tbox_number1.Text=nbr.ToString();
             
+        }
+
+        private void TimerAnim_Tick(object sender, EventArgs e)
+        {
+            if (sidebarExpand==true)
+            {
+                sideMenu.Width -= 10;
+                sideMenu.Height -= 10;
+                if (sideMenu.Width == sideMenu.MinimumSize.Width)
+                {
+                    sidebarExpand = false;
+                    TimerAnim.Stop();
+                }
+            }
+            else
+            {
+                sideMenu.Width += 10;
+                sideMenu.Height += 10;
+                if (sideMenu.Width == sideMenu.MaximumSize.Width)
+                {
+                    sidebarExpand = true;
+                    TimerAnim.Stop();
+                }
+            }
+        }
+
+        private void btn_sideMenu_Click(object sender, EventArgs e)
+        {
+            TimerAnim.Start();
         }
     }
 }

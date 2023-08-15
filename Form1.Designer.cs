@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lbl_hello = new System.Windows.Forms.Label();
             this.tbox_number1 = new System.Windows.Forms.TextBox();
             this.btn_one = new CustomControls.RJControls.RJButton();
@@ -53,6 +54,14 @@
             this.btn_neg = new CustomControls.RJControls.RJButton();
             this.btn_onepx = new CustomControls.RJControls.RJButton();
             this.btn_clrtxtbox = new CustomControls.RJControls.RJButton();
+            this.btn_sideMenu = new CustomControls.RJControls.RJButton();
+            this.sideMenu = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.rjButton2 = new CustomControls.RJControls.RJButton();
+            this.btn_volume = new CustomControls.RJControls.RJButton();
+            this.TimerAnim = new System.Windows.Forms.Timer(this.components);
+            this.sideMenu.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_hello
@@ -370,7 +379,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.label1.Location = new System.Drawing.Point(12, 16);
+            this.label1.Location = new System.Drawing.Point(9, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(21, 21);
             this.label1.TabIndex = 38;
@@ -509,12 +518,98 @@
             this.btn_clrtxtbox.UseVisualStyleBackColor = false;
             this.btn_clrtxtbox.Click += new System.EventHandler(this.btn_clrtxtbox_Click);
             // 
+            // btn_sideMenu
+            // 
+            this.btn_sideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btn_sideMenu.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btn_sideMenu.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_sideMenu.BorderRadius = 0;
+            this.btn_sideMenu.BorderSize = 0;
+            this.btn_sideMenu.FlatAppearance.BorderSize = 0;
+            this.btn_sideMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_sideMenu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_sideMenu.ForeColor = System.Drawing.Color.White;
+            this.btn_sideMenu.Location = new System.Drawing.Point(9, 12);
+            this.btn_sideMenu.Name = "btn_sideMenu";
+            this.btn_sideMenu.Size = new System.Drawing.Size(21, 25);
+            this.btn_sideMenu.TabIndex = 47;
+            this.btn_sideMenu.Text = "≡";
+            this.btn_sideMenu.TextColor = System.Drawing.Color.White;
+            this.btn_sideMenu.UseVisualStyleBackColor = false;
+            this.btn_sideMenu.Click += new System.EventHandler(this.btn_sideMenu_Click);
+            // 
+            // sideMenu
+            // 
+            this.sideMenu.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.sideMenu.Controls.Add(this.panel1);
+            this.sideMenu.Location = new System.Drawing.Point(1, 43);
+            this.sideMenu.MaximumSize = new System.Drawing.Size(205, 322);
+            this.sideMenu.MinimumSize = new System.Drawing.Size(1, 1);
+            this.sideMenu.Name = "sideMenu";
+            this.sideMenu.Size = new System.Drawing.Size(205, 322);
+            this.sideMenu.TabIndex = 48;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.panel1.Controls.Add(this.rjButton2);
+            this.panel1.Controls.Add(this.btn_volume);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.MaximumSize = new System.Drawing.Size(205, 322);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 321);
+            this.panel1.TabIndex = 49;
+            // 
+            // rjButton2
+            // 
+            this.rjButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
+            this.rjButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
+            this.rjButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton2.BorderRadius = 5;
+            this.rjButton2.BorderSize = 0;
+            this.rjButton2.FlatAppearance.BorderSize = 0;
+            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton2.ForeColor = System.Drawing.Color.White;
+            this.rjButton2.Location = new System.Drawing.Point(3, 3);
+            this.rjButton2.Name = "rjButton2";
+            this.rjButton2.Size = new System.Drawing.Size(194, 44);
+            this.rjButton2.TabIndex = 50;
+            this.rjButton2.Text = "Calculator";
+            this.rjButton2.TextColor = System.Drawing.Color.White;
+            this.rjButton2.UseVisualStyleBackColor = false;
+            // 
+            // btn_volume
+            // 
+            this.btn_volume.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
+            this.btn_volume.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
+            this.btn_volume.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_volume.BorderRadius = 5;
+            this.btn_volume.BorderSize = 0;
+            this.btn_volume.FlatAppearance.BorderSize = 0;
+            this.btn_volume.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_volume.ForeColor = System.Drawing.Color.White;
+            this.btn_volume.Location = new System.Drawing.Point(3, 53);
+            this.btn_volume.Name = "btn_volume";
+            this.btn_volume.Size = new System.Drawing.Size(194, 44);
+            this.btn_volume.TabIndex = 49;
+            this.btn_volume.Text = "Volume";
+            this.btn_volume.TextColor = System.Drawing.Color.White;
+            this.btn_volume.UseVisualStyleBackColor = false;
+            // 
+            // TimerAnim
+            // 
+            this.TimerAnim.Enabled = true;
+            this.TimerAnim.Interval = 10;
+            this.TimerAnim.Tick += new System.EventHandler(this.TimerAnim_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.ClientSize = new System.Drawing.Size(318, 376);
+            this.ClientSize = new System.Drawing.Size(319, 376);
+            this.Controls.Add(this.sideMenu);
+            this.Controls.Add(this.btn_sideMenu);
             this.Controls.Add(this.btn_clrtxtbox);
             this.Controls.Add(this.btn_onepx);
             this.Controls.Add(this.btn_neg);
@@ -544,6 +639,8 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.sideMenu.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -575,5 +672,11 @@
         private CustomControls.RJControls.RJButton btn_neg;
         private CustomControls.RJControls.RJButton btn_onepx;
         private CustomControls.RJControls.RJButton btn_clrtxtbox;
+        private CustomControls.RJControls.RJButton btn_sideMenu;
+        private FlowLayoutPanel sideMenu;
+        private Panel panel1;
+        private CustomControls.RJControls.RJButton rjButton2;
+        private CustomControls.RJControls.RJButton btn_volume;
+        private System.Windows.Forms.Timer TimerAnim;
     }
 }
