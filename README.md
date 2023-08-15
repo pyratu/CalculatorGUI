@@ -1,4 +1,4 @@
-# Simple Calculator 🧮
+# Windows 10 Calculator Remake 🧮
 
 ## GUI Preview 📷
 
