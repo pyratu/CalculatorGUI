@@ -5,9 +5,8 @@ namespace CalculatorGUI
 {
     public partial class Form1 : Form
     {
-
         bool sidebarExpand = true;
-
+        bool lengthMenu = false;
         public Form1()
         {
             DarkTitleBarClass.UseImmersiveDarkMode(Handle, true);
@@ -15,7 +14,6 @@ namespace CalculatorGUI
             this.FormBorderStyle = FormBorderStyle.FixedSingle; // OR FormBorderStyle.FixedDialog OR FormBorderStyle.Fixed3D
         }
         bool cnt = false;
-
         public static double Evaluate(string expression)
         {
             System.Data.DataTable table = new System.Data.DataTable();
@@ -24,39 +22,32 @@ namespace CalculatorGUI
             table.Rows.Add(row);
             return double.Parse((string)row["expression"]);
         }
-
         public static string ReplaceAt(string str, int index, int length, string replace)
         {
             return str.Remove(index, Math.Min(length, str.Length - index)).Insert(index, replace);
         }
-
         private void btn_plus_Click(object sender, EventArgs e)
         {
             if (tbox_number1.Text.Length > 0 && cnt == false && (Char.IsDigit(tbox_number1.Text[tbox_number1.Text.Length - 1])) || tbox_number1.Text[tbox_number1.Text.Length - 1] == ')')
                 tbox_number1.Text = tbox_number1.Text + "+";
         }
-
         private void btn_clear_Click(object sender, EventArgs e)
         {
             tbox_number1.Text = "";
             lbl_hello.Text = "";
         }
-
         private void btn_4_Click(object sender, EventArgs e)
         {
             tbox_number1.Text = tbox_number1.Text + "4";
         }
-
         private void btn_1_Click(object sender, EventArgs e)
         {
             tbox_number1.Text = tbox_number1.Text + "1";
         }
-
         private void btn_2_Click(object sender, EventArgs e)
         {
             tbox_number1.Text = tbox_number1.Text + "2";
         }
-
         private void btn_3_Click(object sender, EventArgs e)
         {
             tbox_number1.Text = tbox_number1.Text + "3";
@@ -65,44 +56,36 @@ namespace CalculatorGUI
         {
             tbox_number1.Text = tbox_number1.Text + "5";
         }
-
         private void btn_6_Click(object sender, EventArgs e)
         {
             tbox_number1.Text = tbox_number1.Text + "6";
         }
-
         private void btn_7_Click(object sender, EventArgs e)
         {
             tbox_number1.Text = tbox_number1.Text + "7";
         }
-
         private void btn_8_Click(object sender, EventArgs e)
         {
             tbox_number1.Text = tbox_number1.Text + "8";
         }
-
         private void btn_9_Click(object sender, EventArgs e)
         {
             tbox_number1.Text = tbox_number1.Text + "9";
         }
-
         private void btn_minus_Click(object sender, EventArgs e)
         {
             if (tbox_number1.Text.Length > 0 && cnt == false && (Char.IsDigit(tbox_number1.Text[tbox_number1.Text.Length - 1])) || tbox_number1.Text[tbox_number1.Text.Length - 1] == ')')
                 tbox_number1.Text = tbox_number1.Text + "-";
         }
-
         private void btn_backs_Click(object sender, EventArgs e)
         {
             if (tbox_number1.Text.Length > 0)
                 tbox_number1.Text = tbox_number1.Text.Remove(tbox_number1.Text.Length - 1);
         }
-
         private void btn_0_Click(object sender, EventArgs e)
         {
             tbox_number1.Text = tbox_number1.Text + "0";
         }
-
         private void btn_point_Click(object sender, EventArgs e)
         {
             if (tbox_number1.Text.Length > 0 && cnt == false && (Char.IsDigit(tbox_number1.Text[tbox_number1.Text.Length - 1])))
@@ -111,13 +94,11 @@ namespace CalculatorGUI
                 cnt = true;
             }
         }
-
         private void btn_multiply_Click(object sender, EventArgs e)
         {
             if (tbox_number1.Text.Length > 0 && Char.IsDigit(tbox_number1.Text[tbox_number1.Text.Length - 1]))
                 tbox_number1.Text = tbox_number1.Text + "*";
         }
-
         private void btn_negate_Click(object sender, EventArgs e)
         {
             if (tbox_number1.Text.Length > 0 && Char.IsDigit(tbox_number1.Text[tbox_number1.Text.Length - 1]))
@@ -145,75 +126,61 @@ namespace CalculatorGUI
             if (int.TryParse(strtmp, out n))
                 tbox_number1.Text = (int.Parse(strtmp) * int.Parse(strtmp)).ToString();
         }
-
         private void btn_division_Click(object sender, EventArgs e)
         {
             //if (tbox_number1.Text.Length > 0 && Char.IsDigit(tbox_number1.Text[tbox_number1.Text.Length - 1]))
             if (tbox_number1.Text.Length > 0 && (Char.IsDigit(tbox_number1.Text[tbox_number1.Text.Length - 1]) || tbox_number1.Text[tbox_number1.Text.Length - 1] == ')') && cnt == false)
                 tbox_number1.Text = tbox_number1.Text + "/";
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
-
         private void btn_one_Click(object sender, EventArgs e)
         {
             tbox_number1.Text = tbox_number1.Text + "1";
         }
-
         private void btn_two_Click(object sender, EventArgs e)
         {
             tbox_number1.Text = tbox_number1.Text + "2";
         }
-
         private void btn_three_Click(object sender, EventArgs e)
         {
             tbox_number1.Text = tbox_number1.Text + "3";
         }
-
         private void btn_zero_Click(object sender, EventArgs e)
         {
             tbox_number1.Text = tbox_number1.Text + "0";
         }
-
         private void btn_four_Click(object sender, EventArgs e)
         {
             tbox_number1.Text = tbox_number1.Text + "4";
         }
-
         private void btn_five_Click(object sender, EventArgs e)
         {
             tbox_number1.Text = tbox_number1.Text + "5";
         }
-
         private void btn_six_Click(object sender, EventArgs e)
         {
             tbox_number1.Text = tbox_number1.Text + "6";
         }
-
         private void btn_seven_Click(object sender, EventArgs e)
         {
             tbox_number1.Text = tbox_number1.Text + "7";
         }
-
         private void btn_eight_Click(object sender, EventArgs e)
         {
             tbox_number1.Text = tbox_number1.Text + "8";
         }
-
         private void btn_nine_Click(object sender, EventArgs e)
         {
             tbox_number1.Text = tbox_number1.Text + "9";
         }
-
         private void btn_dot_Click(object sender, EventArgs e)
         {
             tbox_number1.Text = tbox_number1.Text + ".";
             cnt = true;
         }
-
         private void btn_equal_Click(object sender, EventArgs e)
         {
             lbl_hello.Text = tbox_number1.Text;
@@ -227,7 +194,6 @@ namespace CalculatorGUI
             if (tbox_number1.Text.Length > 0 && (Char.IsDigit(tbox_number1.Text[tbox_number1.Text.Length - 1]) || tbox_number1.Text[tbox_number1.Text.Length - 1] == ')') && cnt == false)
                 tbox_number1.Text = tbox_number1.Text + "+";
         }
-
         private void btn_subs_Click(object sender, EventArgs e)
         {
 
@@ -235,19 +201,16 @@ namespace CalculatorGUI
             if (tbox_number1.Text.Length > 0 && (Char.IsDigit(tbox_number1.Text[tbox_number1.Text.Length - 1]) || tbox_number1.Text[tbox_number1.Text.Length - 1] == ')') && cnt == false)
                 tbox_number1.Text = tbox_number1.Text + "-";
         }
-
         private void btn_multypl_Click(object sender, EventArgs e)
         {
             //if (tbox_number1.Text.Length > 0 && Char.IsDigit(tbox_number1.Text[tbox_number1.Text.Length - 1]))
             if (tbox_number1.Text.Length > 0 && (Char.IsDigit(tbox_number1.Text[tbox_number1.Text.Length - 1]) || tbox_number1.Text[tbox_number1.Text.Length - 1] == ')') && cnt == false)
                 tbox_number1.Text = tbox_number1.Text + "*";
         }
-
         private void tbox_number1_TextChanged(object sender, EventArgs e)
         {
 
         }
-
         private void btn_square2_Click(object sender, EventArgs e)
         {
             string str = tbox_number1.Text;
@@ -262,19 +225,16 @@ namespace CalculatorGUI
             if (int.TryParse(strtmp, out n))
                 tbox_number1.Text = (int.Parse(strtmp) * int.Parse(strtmp)).ToString();
         }
-
         private void btn_div_Click(object sender, EventArgs e)
         {
             if (tbox_number1.Text.Length > 0 && Char.IsDigit(tbox_number1.Text[tbox_number1.Text.Length - 1]))
                 tbox_number1.Text = tbox_number1.Text + "/";
         }
-
         private void btn_c_Click(object sender, EventArgs e)
         {
             tbox_number1.Text = "";
             lbl_hello.Text = "";
         }
-
         private void btn_delone_Click(object sender, EventArgs e)
         {
             if (tbox_number1.Text.Length > 0)
@@ -293,13 +253,11 @@ namespace CalculatorGUI
                 tbox_number1.Text = str;
             }
         }
-
         private void btn_clrtxtbox_Click(object sender, EventArgs e)
         {
             tbox_number1.Text = "";
             
         }
-        
         private void btn_onepx_Click(object sender, EventArgs e)
         {
             string number = "";
@@ -314,9 +272,7 @@ namespace CalculatorGUI
             lbl_hello.Text = "1/" + "(" + nbr.ToString() + ")";
             nbr = 1 / nbr;
             tbox_number1.Text=nbr.ToString();
-            
         }
-
         private void TimerAnim_Tick(object sender, EventArgs e)
         {
             if (sidebarExpand==true)
@@ -340,10 +296,27 @@ namespace CalculatorGUI
                 }
             }
         }
-
         private void btn_sideMenu_Click(object sender, EventArgs e)
         {
             TimerAnim.Start();
+        }
+        private void btn_length_Click(object sender, EventArgs e)
+        {
+            TimerAnim.Start();
+            if (lengthMenu==false)
+            {
+                length1.Show();
+                lengthMenu = true;
+            }
+        }
+        private void btn_calcu_Click(object sender, EventArgs e)
+        {
+            TimerAnim.Start();
+            if (lengthMenu == true)
+            {
+                length1.Hide();
+                lengthMenu = false;
+            }
         }
     }
 }
