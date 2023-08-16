@@ -2,13 +2,9 @@
 
 ## GUI Preview 📷
 
-<div style="display: flex;">
-  <div style="flex: 100%; padding: 5px;">
-    <img src="https://raw.githubusercontent.com/pyratu/CalculatorGUI/main/calculator.png" alt="Image 1" width="50%">
-  </div>
-  <div style="flex: 100%; padding: 5px;">
-    <img src="https://raw.githubusercontent.com/pyratu/CalculatorGUI/main/Length.png" alt="Image 2" width="50%">
-  </div>
+<div align="center">
+  <img src="https://raw.githubusercontent.com/pyratu/CalculatorGUI/main/calculator.png" alt="Image 1" width="45%">
+  <img src="https://raw.githubusercontent.com/pyratu/CalculatorGUI/main/Length.png" alt="Image 2" width="45%">
 </div>
 
 ## Description 📜
