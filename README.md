@@ -13,6 +13,7 @@ A work-in-progress **simple calculator** with a graphical user interface (GUI). 
 ## Features 🚀
 
 - Basic arithmetic operations: addition, subtraction, multiplication, and division.
+- Length convertor!
 - User-friendly GUI for easy interaction.
 - Intuitive design to quickly input numbers and perform calculations.
 - Designed with simplicity in mind, making it suitable for users of all levels.
