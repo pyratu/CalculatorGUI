@@ -18,17 +18,17 @@ A work-in-progress **simple calculator** with a graphical user interface (GUI). 
 ## Features 🚀
 
 - Basic arithmetic operations: addition, subtraction, multiplication, and division.
-- Length convertor!
 - User-friendly GUI for easy interaction.
-- Intuitive design to quickly input numbers and perform calculations.
-- Designed with simplicity in mind, making it suitable for users of all levels.
-- Ongoing project - stay tuned for more features and improvements!
+- Intuitive design for swift input and calculations.
+- A length converter, supporting conversions between meters, km, yards, inches, cm and more.
+- A programmer converter, facilitating conversions between binary, decimal, octal, and hexadecimal.
+- Added a handy side menu for seamless navigation between converters.
 
 ## Future Plans 🌟
 
 - Incorporate advanced functions such as square root and percentage calculations.
-- Enhance the user interface with a modern and visually appealing design.
-- Implement history tracking to review and reuse previous calculations.
+- ~~Enhance the user interface with a modern and visually appealing design.~~
+- Implement a **better** history tracking to review and reuse previous calculations.
 
 ## Contributing 🤝
 
