@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.lbl_hello = new System.Windows.Forms.Label();
             this.tbox_number1 = new System.Windows.Forms.TextBox();
             this.btn_one = new CustomControls.RJControls.RJButton();
@@ -57,11 +58,12 @@
             this.btn_sideMenu = new CustomControls.RJControls.RJButton();
             this.sideMenu = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_programmer = new CustomControls.RJControls.RJButton();
             this.btn_calcu = new CustomControls.RJControls.RJButton();
-            this.btn_volume = new CustomControls.RJControls.RJButton();
             this.btn_length = new CustomControls.RJControls.RJButton();
             this.TimerAnim = new System.Windows.Forms.Timer(this.components);
             this.length1 = new CalculatorGUI.Length();
+            this.programmer1 = new CalculatorGUI.Programmer();
             this.sideMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -547,20 +549,39 @@
             this.sideMenu.Location = new System.Drawing.Point(1, 43);
             this.sideMenu.MaximumSize = new System.Drawing.Size(205, 322);
             this.sideMenu.Name = "sideMenu";
-            this.sideMenu.Size = new System.Drawing.Size(0, 0);
+            this.sideMenu.Size = new System.Drawing.Size(205, 322);
             this.sideMenu.TabIndex = 48;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.panel1.Controls.Add(this.btn_programmer);
             this.panel1.Controls.Add(this.btn_calcu);
-            this.panel1.Controls.Add(this.btn_volume);
             this.panel1.Controls.Add(this.btn_length);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.MaximumSize = new System.Drawing.Size(205, 322);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 321);
             this.panel1.TabIndex = 49;
+            // 
+            // btn_programmer
+            // 
+            this.btn_programmer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
+            this.btn_programmer.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
+            this.btn_programmer.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_programmer.BorderRadius = 5;
+            this.btn_programmer.BorderSize = 0;
+            this.btn_programmer.FlatAppearance.BorderSize = 0;
+            this.btn_programmer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_programmer.ForeColor = System.Drawing.Color.White;
+            this.btn_programmer.Location = new System.Drawing.Point(3, 103);
+            this.btn_programmer.Name = "btn_programmer";
+            this.btn_programmer.Size = new System.Drawing.Size(194, 44);
+            this.btn_programmer.TabIndex = 53;
+            this.btn_programmer.Text = "Programmer";
+            this.btn_programmer.TextColor = System.Drawing.Color.White;
+            this.btn_programmer.UseVisualStyleBackColor = false;
+            this.btn_programmer.Click += new System.EventHandler(this.btn_programmer_Click);
             // 
             // btn_calcu
             // 
@@ -572,7 +593,7 @@
             this.btn_calcu.FlatAppearance.BorderSize = 0;
             this.btn_calcu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_calcu.ForeColor = System.Drawing.Color.White;
-            this.btn_calcu.Location = new System.Drawing.Point(8, 3);
+            this.btn_calcu.Location = new System.Drawing.Point(3, 3);
             this.btn_calcu.Name = "btn_calcu";
             this.btn_calcu.Size = new System.Drawing.Size(194, 44);
             this.btn_calcu.TabIndex = 52;
@@ -580,24 +601,6 @@
             this.btn_calcu.TextColor = System.Drawing.Color.White;
             this.btn_calcu.UseVisualStyleBackColor = false;
             this.btn_calcu.Click += new System.EventHandler(this.btn_calcu_Click);
-            // 
-            // btn_volume
-            // 
-            this.btn_volume.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
-            this.btn_volume.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
-            this.btn_volume.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_volume.BorderRadius = 5;
-            this.btn_volume.BorderSize = 0;
-            this.btn_volume.FlatAppearance.BorderSize = 0;
-            this.btn_volume.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_volume.ForeColor = System.Drawing.Color.White;
-            this.btn_volume.Location = new System.Drawing.Point(5, 103);
-            this.btn_volume.Name = "btn_volume";
-            this.btn_volume.Size = new System.Drawing.Size(194, 44);
-            this.btn_volume.TabIndex = 49;
-            this.btn_volume.Text = "Volume";
-            this.btn_volume.TextColor = System.Drawing.Color.White;
-            this.btn_volume.UseVisualStyleBackColor = false;
             // 
             // btn_length
             // 
@@ -609,7 +612,7 @@
             this.btn_length.FlatAppearance.BorderSize = 0;
             this.btn_length.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_length.ForeColor = System.Drawing.Color.White;
-            this.btn_length.Location = new System.Drawing.Point(6, 53);
+            this.btn_length.Location = new System.Drawing.Point(3, 53);
             this.btn_length.Name = "btn_length";
             this.btn_length.Size = new System.Drawing.Size(194, 44);
             this.btn_length.TabIndex = 51;
@@ -633,15 +636,25 @@
             this.length1.TabIndex = 49;
             this.length1.Visible = false;
             // 
+            // programmer1
+            // 
+            this.programmer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.programmer1.Location = new System.Drawing.Point(0, 0);
+            this.programmer1.Name = "programmer1";
+            this.programmer1.Size = new System.Drawing.Size(320, 378);
+            this.programmer1.TabIndex = 50;
+            this.programmer1.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.ClientSize = new System.Drawing.Size(332, 376);
+            this.ClientSize = new System.Drawing.Size(317, 387);
             this.Controls.Add(this.btn_sideMenu);
             this.Controls.Add(this.sideMenu);
             this.Controls.Add(this.length1);
+            this.Controls.Add(this.programmer1);
             this.Controls.Add(this.btn_clrtxtbox);
             this.Controls.Add(this.btn_onepx);
             this.Controls.Add(this.btn_neg);
@@ -667,9 +680,10 @@
             this.Controls.Add(this.btn_two);
             this.Controls.Add(this.btn_one);
             this.Controls.Add(this.tbox_number1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Calculator";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.sideMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -707,10 +721,11 @@
         private CustomControls.RJControls.RJButton btn_sideMenu;
         private FlowLayoutPanel sideMenu;
         private Panel panel1;
-        private CustomControls.RJControls.RJButton btn_volume;
         private System.Windows.Forms.Timer TimerAnim;
         private CustomControls.RJControls.RJButton btn_length;
         private Length length1;
         private CustomControls.RJControls.RJButton btn_calcu;
+        private CustomControls.RJControls.RJButton btn_programmer;
+        private Programmer programmer1;
     }
 }

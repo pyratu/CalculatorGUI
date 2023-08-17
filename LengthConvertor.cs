@@ -32,7 +32,7 @@ public class LengthConvertor
         }
         else
         {
-            throw new ArgumentException("Unsupported units");
+            return 0;
         }
         Console.WriteLine(result);
     }

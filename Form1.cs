@@ -7,6 +7,7 @@ namespace CalculatorGUI
     {
         bool sidebarExpand = true;
         bool lengthMenu = false;
+        bool programmerMenu = false;
         public Form1()
         {
             DarkTitleBarClass.UseImmersiveDarkMode(Handle, true);
@@ -308,6 +309,11 @@ namespace CalculatorGUI
                 length1.Show();
                 lengthMenu = true;
             }
+            if (programmerMenu == true)
+            {
+                programmer1.Hide();
+                programmerMenu = false;
+            }
         }
         private void btn_calcu_Click(object sender, EventArgs e)
         {
@@ -317,6 +323,31 @@ namespace CalculatorGUI
                 length1.Hide();
                 lengthMenu = false;
             }
+            if (programmerMenu == true)
+            {
+                programmer1.Hide();
+                programmerMenu = false;
+            }
+        }
+
+        private void btn_programmer_Click(object sender, EventArgs e)
+        {
+            TimerAnim.Start();
+            if (lengthMenu == true)
+            {
+                length1.Hide();
+                lengthMenu = false;
+            }
+            if(programmerMenu==false)
+            {
+                programmer1.Show();
+                programmerMenu = true;
+            }    
+        }
+
+        private void programmer1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
