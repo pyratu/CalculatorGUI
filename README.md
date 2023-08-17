@@ -3,10 +3,10 @@
 ## GUI Preview 📷
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/pyratu/CalculatorGUI/main/calculator.png" alt="Image 1" width="35%">
-  <img src="https://raw.githubusercontent.com/pyratu/CalculatorGUI/main/Length.png" alt="Image 2" width="35%">
-  <img src="https://raw.githubusercontent.com/pyratu/CalculatorGUI/main/Programmer.png" alt="Image 3" width="35%">
-  <img src="https://raw.githubusercontent.com/pyratu/CalculatorGUI/main/sideMenu.png" alt="Image 4" width="35%">
+  <img src="https://raw.githubusercontent.com/pyratu/CalculatorGUI/main/img/Calculator.png" alt="Image 1" width="35%">
+  <img src="https://raw.githubusercontent.com/pyratu/CalculatorGUI/main/img/Length.png" alt="Image 2" width="35%">
+  <img src="https://raw.githubusercontent.com/pyratu/CalculatorGUI/main/img/Programmer.png" alt="Image 3" width="35%">
+  <img src="https://raw.githubusercontent.com/pyratu/CalculatorGUI/main/img/sideMenu.png" alt="Image 4" width="35%">
   
 
 </div>
