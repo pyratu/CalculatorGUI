@@ -34,6 +34,5 @@ public class LengthConvertor
         {
             return 0;
         }
-        Console.WriteLine(result);
     }
 }
