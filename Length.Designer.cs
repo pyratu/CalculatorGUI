@@ -37,28 +37,47 @@
             // 
             // txbox_from
             // 
-            this.txbox_from.Location = new System.Drawing.Point(88, 71);
+            this.txbox_from.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.txbox_from.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbox_from.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txbox_from.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.txbox_from.Location = new System.Drawing.Point(88, 15);
             this.txbox_from.Name = "txbox_from";
-            this.txbox_from.Size = new System.Drawing.Size(121, 23);
+            this.txbox_from.Size = new System.Drawing.Size(205, 54);
             this.txbox_from.TabIndex = 0;
             this.txbox_from.Text = "0";
             this.txbox_from.TextChanged += new System.EventHandler(this.txbox_from_TextChanged);
             // 
             // txbox_to
             // 
-            this.txbox_to.Location = new System.Drawing.Point(88, 282);
+            this.txbox_to.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.txbox_to.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbox_to.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txbox_to.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.txbox_to.Location = new System.Drawing.Point(88, 232);
             this.txbox_to.Name = "txbox_to";
-            this.txbox_to.Size = new System.Drawing.Size(100, 23);
+            this.txbox_to.Size = new System.Drawing.Size(205, 54);
             this.txbox_to.TabIndex = 1;
             this.txbox_to.Text = "0";
             // 
             // combo_to
             // 
+            this.combo_to.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.combo_to.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.combo_to.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.combo_to.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.combo_to.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.combo_to.FormattingEnabled = true;
             this.combo_to.Items.AddRange(new object[] {
-            "Centimeters",
-            "Meters",
-            "Kilometers"});
+            "meters",
+            "kilometers",
+            "centimeters",
+            "millimeters",
+            "feet",
+            "inches",
+            "yards",
+            "miles",
+            "nautical miles"});
             this.combo_to.Location = new System.Drawing.Point(88, 311);
             this.combo_to.Name = "combo_to";
             this.combo_to.Size = new System.Drawing.Size(121, 23);
@@ -66,11 +85,22 @@
             // 
             // combo_form
             // 
+            this.combo_form.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.combo_form.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.combo_form.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.combo_form.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.combo_form.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.combo_form.FormattingEnabled = true;
             this.combo_form.Items.AddRange(new object[] {
-            "Centimeters",
-            "Meters",
-            "Kilometers"});
+            "meters",
+            "kilometers",
+            "centimeters",
+            "millimeters",
+            "feet",
+            "inches",
+            "yards",
+            "miles",
+            "nautical miles"});
             this.combo_form.Location = new System.Drawing.Point(88, 100);
             this.combo_form.Name = "combo_form";
             this.combo_form.Size = new System.Drawing.Size(121, 23);
@@ -87,7 +117,7 @@
             this.btn_toconvert.FlatAppearance.BorderSize = 0;
             this.btn_toconvert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_toconvert.ForeColor = System.Drawing.Color.White;
-            this.btn_toconvert.Location = new System.Drawing.Point(76, 171);
+            this.btn_toconvert.Location = new System.Drawing.Point(76, 175);
             this.btn_toconvert.Name = "btn_toconvert";
             this.btn_toconvert.Size = new System.Drawing.Size(150, 40);
             this.btn_toconvert.TabIndex = 4;

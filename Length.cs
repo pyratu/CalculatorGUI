@@ -19,7 +19,7 @@ namespace CalculatorGUI
 
         private void btn_toconvert_Click(object sender, EventArgs e)
         {
-            double result = LengthConvertor.Convert(int.Parse(txbox_from.Text), combo_form.Text, combo_to.Text);
+            double result = LengthConvertor.Convert(Double.Parse(txbox_from.Text), combo_form.Text, combo_to.Text);
             txbox_to.Text = result.ToString();
         }
 
